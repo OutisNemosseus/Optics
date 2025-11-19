@@ -58,7 +58,7 @@ import base64
     return (
       <div className="app">
         <div style={{ padding: '3rem', textAlign: 'center' }}>
-          <h1>Optics & Berkeley Extension Programs</h1>
+          <h1>Muller Optics Programs</h1>
           <p style={{ color: '#6b7280', margin: '1rem 0' }}>基于 React + Pyodide 的光学程序集</p>
           <div style={{ fontSize: '1.2rem', color: '#9ca3af', marginTop: '2rem' }}>
             ⏳ {loadingStatus}

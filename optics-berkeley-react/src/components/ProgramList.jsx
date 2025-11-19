@@ -68,7 +68,7 @@ function ProgramList() {
   return (
     <div className="program-list">
       <div className="header">
-        <h1>🔬 Optics & Berkeley Extension Programs</h1>
+        <h1>🔬 Muller Optics Programs</h1>
         <p className="subtitle">
           {filteredPrograms.length} of {programs.length} programs
         </p>
@@ -80,6 +80,14 @@ function ProgramList() {
             className="book-link"
           >
             📚 Reference: Field Guide to Geometrical Optics (Springer)
+          </a>
+          <a
+            href="https://github.com/OutisNemosseus/Optics"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="book-link"
+          >
+            ⭐ GitHub Repository
           </a>
         </div>
       </div>
