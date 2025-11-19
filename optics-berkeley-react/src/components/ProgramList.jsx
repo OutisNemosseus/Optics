@@ -68,7 +68,7 @@ function ProgramList() {
   return (
     <div className="program-list">
       <div className="header">
-        <h1>🔬 Muller Optics Programs</h1>
+        <h1>Moller Optics programs</h1>
         <p className="subtitle">
           {filteredPrograms.length} of {programs.length} programs
         </p>
@@ -88,6 +88,14 @@ function ProgramList() {
             className="book-link"
           >
             ⭐ GitHub Repository
+          </a>
+          <a
+            href="https://github.com/OutisNemosseus"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="book-link"
+          >
+            👤 Creator GitHub Profile
           </a>
         </div>
       </div>
