@@ -1,0 +1,359 @@
+.ide-layout {
+  display: flex;
+  height: calc(100vh - 200px);
+  min-height: 600px;
+  gap: 0;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Left Panel - Scripts & Inputs */
+.ide-left-panel {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-right: 2px solid #e0e0e0;
+  overflow: hidden;
+}
+
+/* Tab Bar */
+.ide-tabs {
+  display: flex;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+  gap: 2px;
+}
+
+.ide-tab {
+  padding: 10px 20px;
+  background: #e8e8e8;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.ide-tab:hover {
+  background: #d8d8d8;
+  color: #333;
+}
+
+.ide-tab.active {
+  background: #ffffff;
+  color: #3498db;
+  border-bottom-color: #3498db;
+}
+
+/* Code Editor Area */
+.ide-editor-container {
+  flex: 1;
+  overflow: auto;
+  background: #ffffff;
+  position: relative;
+}
+
+/* Copy Button */
+.ide-copy-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ide-copy-button:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.ide-copy-button:active {
+  transform: translateY(0);
+}
+
+.ide-code-editor {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: none;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: none;
+  background: #ffffff;
+  color: #2c3e50;
+  outline: none;
+}
+
+.ide-code-display {
+  margin: 0;
+  padding: 16px;
+  height: 100%;
+  overflow: auto;
+  background: #f8f8f8;
+  border: none;
+}
+
+.ide-code-display code {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2c3e50;
+  white-space: pre;
+}
+
+/* Parameters Section */
+.ide-params-section {
+  border-top: 1px solid #e0e0e0;
+  background: #fafafa;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.ide-params-header {
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #555;
+  background: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ide-params-list {
+  padding: 12px 16px;
+}
+
+.ide-param-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.ide-param-input label {
+  flex: 0 0 180px;
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+
+.ide-param-input input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 13px;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.ide-param-input input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+/* Wikipedia Links Section */
+.ide-wiki-section {
+  border-top: 1px solid #e0e0e0;
+  background: #f9fcff;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.ide-wiki-header {
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #555;
+  background: #e8f4f8;
+  border-bottom: 1px solid #d0e8f0;
+}
+
+.ide-wiki-links {
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ide-wiki-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #ffffff;
+  color: #2563eb;
+  text-decoration: none;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.ide-wiki-link:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+/* Actions Bar */
+.ide-actions {
+  padding: 12px 16px;
+  background: #f8f8f8;
+  border-top: 1px solid #e0e0e0;
+}
+
+.ide-run-button {
+  width: 100%;
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.ide-run-button:hover:not(:disabled) {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.ide-run-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ide-run-button:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Right Panel - Results */
+.ide-right-panel {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+.ide-results-header {
+  padding: 12px 16px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ide-results-content {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.ide-no-output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #999;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.loading {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ide-layout {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+  }
+
+  .ide-left-panel,
+  .ide-right-panel {
+    width: 100%;
+  }
+
+  .ide-left-panel {
+    border-right: none;
+    border-bottom: 2px solid #e0e0e0;
+    min-height: 500px;
+  }
+
+  .ide-right-panel {
+    min-height: 400px;
+  }
+
+  .ide-editor-container {
+    min-height: 300px;
+  }
+}
+
+/* Scrollbar Styling */
+.ide-editor-container::-webkit-scrollbar,
+.ide-params-section::-webkit-scrollbar,
+.ide-results-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.ide-editor-container::-webkit-scrollbar-track,
+.ide-params-section::-webkit-scrollbar-track,
+.ide-results-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.ide-editor-container::-webkit-scrollbar-thumb,
+.ide-params-section::-webkit-scrollbar-thumb,
+.ide-results-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.ide-editor-container::-webkit-scrollbar-thumb:hover,
+.ide-params-section::-webkit-scrollbar-thumb:hover,
+.ide-results-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
