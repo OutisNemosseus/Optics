@@ -2,6 +2,7 @@ services:
   - type: web
     name: optics-berkeley
     runtime: static
+    rootDir: optics-berkeley-react
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     headers:
